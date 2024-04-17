@@ -79,14 +79,30 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### Применение миграций
+##  В активированное виртуальное окружение установите фреймворк Django:
+                    pip install Django==версия_фреймворка. 
 
+##  Создайте Django-проект в папке виртуального окружения: 
+                    django-admin startproject название_проекта.
+
+### Применение миграций
     
 В директории с файлом manage.py выполните команду: 
-
 ```bash
 python manage.py migrate
 ```
+
+##  Как создать приложение в Django-проекте
+### Находясь в папке Django-проекта, выполните команду:
+                    python manage.py startapp имя_приложения
+
+### Как зарегистрировать Django-приложение
+### Добавьте в список INSTALLED_APPS в файле settings.py класс конфига приложения из файла apps.py :
+### название_проекта/settings.py
+                    INSTALLED_APPS = [
+                        'имя_приложения.apps.ИмяПриложенияConfig',
+                        ...]
+
 
 ### Запуск проекта в dev-режиме
 
